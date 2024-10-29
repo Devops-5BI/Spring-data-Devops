@@ -57,9 +57,6 @@ class EquipeServiceImplTest {
 
     }
 
-
-
-
     @Test
     void deleteEquipe() {
     }
