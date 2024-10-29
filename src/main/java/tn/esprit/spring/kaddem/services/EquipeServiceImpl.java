@@ -41,7 +41,7 @@ public class EquipeServiceImpl implements IEquipeService{
 	return (	equipeRepository.save(e));
 	}
 
-	public void evoluerEquipes(){
+	/* public void evoluerEquipes(){
 		List<Equipe> equipes = (List<Equipe>) equipeRepository.findAll();
 		for (Equipe equipe : equipes) {
 			if ((equipe.getNiveau().equals(Niveau.JUNIOR)) || (equipe.getNiveau().equals(Niveau.SENIOR))) {
@@ -78,5 +78,5 @@ public class EquipeServiceImpl implements IEquipeService{
 
 
 	}
-	}
+	}*/
 }
