@@ -16,7 +16,7 @@ pipeline {
             steps {
                 git branch: 'hassen',
                 credentialsId: 'b0237264-56c1-4ef7-9387-5fadecede16f',
-                url: "https://github.com/hassen29/Spring-data-Devops.git"
+                url: "https://github.com/Devops-5BI/Spring-data-Devops.git"
             }
         }
         stage('Build') {
