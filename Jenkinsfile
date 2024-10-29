@@ -19,11 +19,7 @@ pipeline {
                 url: "https://github.com/Devops-5BI/Spring-data-Devops.git"
             }
         }
-        stage('Build') {
-            steps {
-                    sh 'mvn clean package'
-            }
-        }
+
         stage('SonarQube Analysis') {
                             steps {
 
