@@ -78,5 +78,6 @@ public class EquipeServiceImpl implements IEquipeService{
 
 		}
 
+
 	}
 }
