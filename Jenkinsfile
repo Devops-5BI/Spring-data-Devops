@@ -20,15 +20,7 @@ pipeline {
             }
         }
 
-       /* stage('SonarQube Analysis') {
-                            steps {
-                                    withSonarQubeEnv('SonarQube') {
-                                        sh 'mvn sonar:sonar'
-                                    }
 
-                            }
-        }
-*/
 
         stage('Deploy to Nexus') {
                             steps {
