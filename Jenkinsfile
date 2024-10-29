@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+       /* stage('SonarQube Analysis') {
                             steps {
                                     withSonarQubeEnv('SonarQube') {
                                         sh 'mvn sonar:sonar'
@@ -28,9 +28,14 @@ pipeline {
 
                             }
         }
+*/
 
+        stage('Deploy to Nexus') {
+                            steps {
+                                    script{ sh 'mvn deploy'}
 
-
+                                 }
+        }
 
 
     }
