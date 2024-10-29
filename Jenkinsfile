@@ -11,6 +11,7 @@ pipeline {
         SONARQUBE_CREDENTIALS = 'SonarQube' // SonarQube credentials ID from Jenkins
     }
 
+
     stages {
         stage('Checkout') {
             steps {
