@@ -8,6 +8,7 @@ pipeline {
         PATH = "${M2_HOME}/bin:${JAVA_HOME}/bin:${env.PATH}"
         SONARQUBE_URL = "http://localhost:9000/" // SonarQube server URL
         SONARQUBE_CREDENTIALS = 'SonarQube' // SonarQube credentials ID from Jenkins
+        IMAGE_NAME = "hassen10/hassen5bi37"
     }
 
     stages {
