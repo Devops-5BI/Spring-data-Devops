@@ -26,9 +26,10 @@ pipeline {
                     }
          }
 
-        stage('Deploy to SonarQube') {
+        stage('SonarQube Analysis') {
                             steps {
-                                    script{ sh 'mvn sonar:sonar'}
+                                 withSonarQubeEnv('SonarQube'){script{ sh 'mvn sonar:sonar'}}
+                                    
                                  }
         }
 
