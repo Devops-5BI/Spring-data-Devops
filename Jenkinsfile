@@ -35,27 +35,26 @@ pipeline {
 
 
         stage('Build Docker Image') {
-                    steps {
+            steps {
+                script {
+                    sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .'
+                }
+            }
+        }
 
-                            script {
-                                sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .'
-
-                        }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh """
+                            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                            docker push ${IMAGE_NAME}:${BUILD_NUMBER}
+                        """
                     }
                 }
+            }
+        }
 
-                stage('Push Docker Image') {
-                    steps {
-                        script {
-                            withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                                sh """
-                                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                                    docker push ${IMAGE_NAME}:${BUILD_NUMBER}
-                                """
-                            }
-                        }
-                    }
-                }
 
 
 
