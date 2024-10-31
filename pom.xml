@@ -56,7 +56,6 @@
         </dependency>
 
     </dependencies>
-
     <!-- Deploy to Nexus -->
     <distributionManagement>
         <repository>
