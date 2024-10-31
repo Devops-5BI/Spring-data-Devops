@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY target/0.0.1-SNAPSHOT app.jar
+COPY target/kaddem-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port on which your Spring Boot application will run
 EXPOSE 8080
