@@ -26,9 +26,9 @@ pipeline {
                     }
          }
 
-        stage('Deploy to Nexus') {
+        stage('Deploy to SonarQube') {
                             steps {
-                                    script{ sh 'mvn deploy'}
+                                    script{ sh 'mvn sonar:sonar'}
                                  }
         }
 
