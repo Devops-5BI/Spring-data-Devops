@@ -27,11 +27,11 @@ pipeline {
                     }
          }
 
-        stage('Deploy to Nexus') {
+     /*   stage('Deploy to Nexus') {
                             steps {
                                     script{ sh 'mvn deploy'}
                                  }
-        }
+        }*/
 
 
         stage('Build Docker Image') {
