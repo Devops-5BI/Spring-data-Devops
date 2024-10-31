@@ -41,7 +41,7 @@ pipeline {
 
      /*   stage('Deploy to Nexus') {
                             steps {
-                                    script{ sh 'mvn deploy'}
+                                     script{ sh 'mvn deploy'}
                                  }
         }*/
 

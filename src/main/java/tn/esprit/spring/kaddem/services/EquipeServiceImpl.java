@@ -30,6 +30,8 @@ public class EquipeServiceImpl implements IEquipeService{
 		equipeRepository.delete(e);
 	}
 
+
+
 	public Equipe retrieveEquipe(Integer equipeId){
 		return equipeRepository.findById(equipeId).get();
 	}
