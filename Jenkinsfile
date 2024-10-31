@@ -18,7 +18,6 @@ pipeline {
                 url: "https://github.com/Devops-5BI/Spring-data-Devops.git"
             }
         }
-
          stage('Build') {
                     steps {
                         script {
