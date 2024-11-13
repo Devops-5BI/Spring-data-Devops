@@ -15,7 +15,7 @@ services:
       - springboot-mysql-network
 
   springboot-app:
-    image: houssemhosni/hosnihoussem-5artic3-g5-devops:${BUILD_NUMBER}
+    image: hassen10/hassen5bi37:${BUILD_NUMBER}
     container_name: springboot-app
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/devops?createDatabaseIfNotExist=true
